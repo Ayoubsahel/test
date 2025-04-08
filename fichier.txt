@@ -1,2 +1,1 @@
-Contenu initial
-Contenu ajouté dans feature-1
+Contenu modifié dans feature-2
