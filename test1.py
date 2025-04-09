@@ -1,3 +1,7 @@
 def a(a: float, b: float, c: float) -> int:
-    return a + b + c
+    return "la somme est:", a + b + c
 
+
+
+def d():
+    return "fg"
