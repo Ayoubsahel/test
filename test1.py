@@ -1,1 +1,3 @@
-a
+def a():
+    pass
+
