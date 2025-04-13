@@ -1,12 +1,38 @@
+from ticX import X
+from ticO import O
+from fonct import replace
+import numpy as np
+
 class board:
     
-    a = {1: None, 2: None, 3: None, 
-         4: None, 5: None, 6: None,
-         7: None, 8: None, 9: None}
+    a = np.array([[None, None, None],
+                  [None, None, None],
+                  [None, None, None]])
 
     def __init__(self):
         self.bd = board.a
 
+    def __str__(self):
+        rep = None
+        l = []    
+        for i in self.bd:
+            for j in self.bd:
+                l.append(j)
+        replace(l,None," ")
+        rep = f"{l[0]}|{l[1]}|{l[2]}",
+        
+        
+        return rep
+
     def check(self):
         if True:
             pass
+
+    def add(self,lig,col,signe):
+        if self.bd[lig][col] == None:
+            self.bd[lig][col] = signe()
+        else:
+            print("case deja prise")
+    
+
+        

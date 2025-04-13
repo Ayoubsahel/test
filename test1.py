@@ -1,6 +1,9 @@
-def a(a: float, b: float, c: float) -> int:
-    return "la somme est:", a + b + c
-def b(a: float, b: float, c: float) -> int:
-    return "la multiplication est egale a :", a * b * c
-def d():
-    return "fg"
+l = [None,4,5,5,7,None,None,None,8.54,"nna","reset","la",None]
+
+def a(lst, word, remplace):
+    for i in range(len(lst)):
+        if lst[i] == word:
+            lst[i] = remplace
+
+a(l, 5, "a")
+print(l)

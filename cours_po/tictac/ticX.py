@@ -1,3 +1,5 @@
+from tic import tic
+
 class X:
     def __init__(self):
         self.signe = "X"
