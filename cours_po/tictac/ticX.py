@@ -1,6 +1,6 @@
 from tic import tic
 
-class X:
+class X(tic):
     def __init__(self):
         self.signe = "X"
 

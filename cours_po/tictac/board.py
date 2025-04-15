@@ -19,14 +19,11 @@ class board:
             for j in self.bd:
                 l.append(j)
         replace(l,None," ")
-        rep = f"{l[0]}|{l[1]}|{l[2]}",
-        
-        
-        return rep
 
-    def check(self):
-        if True:
-            pass
+        rep = f"{l[0]}|{l[1]}|{l[2]}", "---------------", f"{l[3]}|{l[4]}|{l[5]}", "---------------", f"{l[6]}|{l[7]}|{l[8]}"
+              
+        return rep
+            
 
     def add(self,lig,col,signe):
         if self.bd[lig][col] == None:

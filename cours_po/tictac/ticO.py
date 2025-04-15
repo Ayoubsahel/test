@@ -1,4 +1,4 @@
 from tic import tic
 
-class O:
+class O(tic):
     pass

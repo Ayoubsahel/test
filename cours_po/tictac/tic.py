@@ -1,5 +1,5 @@
 from abc import ABC
 
 class tic(ABC):
-    
-    pass
+    def __str__(self):
+        pass
