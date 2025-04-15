@@ -1,6 +1,7 @@
 from ticX import X
 from ticO import O
 from fonct import replace
+from tic import tic
 import numpy as np
 
 class board:
@@ -20,16 +21,31 @@ class board:
                 l.append(j)
         replace(l,None," ")
 
-        rep = f"{l[0]}|{l[1]}|{l[2]}", "---------------", f"{l[3]}|{l[4]}|{l[5]}", "---------------", f"{l[6]}|{l[7]}|{l[8]}"
+        rep = f"{str(l[0])}|{str(l[1])}|{str(l[2])}", "---------------", f"{str(l[3])}|{str(l[4])}|{str(l[5])}", "---------------", f"{str(l[6])}|{str(l[7])}|{str(l[8])}"
               
         return rep
             
 
-    def add(self,lig,col,signe):
+    def add(self, lig: int, col: int, signe: tic):
         if self.bd[lig][col] == None:
             self.bd[lig][col] = signe()
+            print(str(self))
+            return True
         else:
             print("case deja prise")
+            return False
     
-
+    def checkline(self, line: int):
+        return self.bd[line]
+    
+    def checkcolone(self, colone:  int):
+        for i in self.bd:
+            a = np.array(i[colone])
+        return a 
         
+    def checkdiag(self, diag: int):
+        if diag == 0:
+            rep = np.array([self.bd[0][0], self[1][1], self.bd[2][2]])
+        elif diag == 1:
+            rep = np.array([self.bd[0][2], self[1][1], self.bd[2][0]])
+        return rep
